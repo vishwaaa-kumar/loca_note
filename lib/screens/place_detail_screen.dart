@@ -26,19 +26,29 @@ class PlaceDetailScreen extends StatelessWidget {
               width: double.infinity,
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: 30,),
           Text(
-            selectedPlace.location.address,
+            'Description: '+selectedPlace.description,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 20,
               color: Colors.grey,
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: 30,),
+          Text(
+            'Address: '+selectedPlace.location.address,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.grey,
+            ),
+          ),
+          SizedBox(height: 30,),
           FlatButton(
             child: Text('View on Map'),
             textColor: Theme.of(context).primaryColor,
+            color: Theme.of(context).primaryColor,
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
