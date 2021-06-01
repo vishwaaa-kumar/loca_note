@@ -18,6 +18,7 @@ class GreatPlaces with ChangeNotifier {
   }
 
   Future<void> addPlace(String pickedTitle,
+   String pickedDescription,
    File pickedImage,
    PlaceLocation pickedLocation,
   ) async {
@@ -32,6 +33,7 @@ class GreatPlaces with ChangeNotifier {
       id: DateTime.now().toString(),
       image: pickedImage,
       title: pickedTitle,
+      description: pickedDescription,
       location: updatedLocation,
       );
     _items.add(newPlace);
@@ -41,6 +43,7 @@ class GreatPlaces with ChangeNotifier {
       {
         'id': newPlace.id,
         'title': newPlace.title,
+        'description': newPlace.description,
         'image': newPlace.image.path,
         'loc_lat': newPlace.location.latitude,
         'loc_lng': newPlace.location.longitude,
@@ -55,6 +58,7 @@ class GreatPlaces with ChangeNotifier {
         (item) => Place(
           id: item['id'],
           title: item['title'],
+          description: item['description'],
           image: File(item['image']),
           location: PlaceLocation(
             latitude: item['loc_lat'],
