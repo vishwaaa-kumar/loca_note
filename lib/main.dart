@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Loca Note',
         theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        accentColor: Colors.amber,
+        primarySwatch: Colors.yellow,
+        accentColor: Colors.green,
         ),
        home: PlacesListScreen(),
        routes: {
